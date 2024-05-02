@@ -4,8 +4,6 @@ services:
   mysql_source:
     image: mysql:8.0
     command: --server-id=1 --log-bin=mysql-bin --binlog-format=ROW --innodb_flush_log_at_trx_commit=1 --sync_binlog=1
-    # env_file:
-    #   - ./source/mysql_source.env
     environment:
       MYSQL_ROOT_PASSWORD: root
     container_name: "mysql_source"
